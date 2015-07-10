@@ -1,0 +1,29 @@
+{
+  "name": "form-debug-react.zz",
+  "version": "1.0.0",
+  "description": "форма на react.js+flux для того, что бы показать как отлаживать react.js в ide от JetBrains",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/volkovpv/form-debug-react.git"
+  },
+  "keywords": [
+    "react",
+    "flux",
+    "debug",
+    "JetBrains",
+    "WebStorm",
+    "PhpStorm",
+    "IntelliJ",
+    "IDEA"
+  ],
+  "author": "volkov_p_v",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/volkovpv/form-debug-react/issues"
+  },
+  "homepage": "https://github.com/volkovpv/form-debug-react"
+}
