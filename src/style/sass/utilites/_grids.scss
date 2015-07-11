@@ -1,0 +1,23 @@
+@import "susy";
+@import "breakpoint";
+
+//Для того, что бы посмотреть сетку раскомментируй блок debug
+
+$susy: (
+  columns: 16,
+  gutters: 20px/55px,
+  output: float,
+  container-position: center,
+  container: 1200px,
+  gutter-position: split,
+  global-box-sizing: border-box,
+  use-custom: (rem: true),
+        //debug: (
+        //        image: show,
+        //        color: rgba(#ff4036, .25),
+        //        output: background,
+        //        toggle: top right,
+        //),
+);
+
+
