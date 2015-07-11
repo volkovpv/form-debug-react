@@ -3,7 +3,7 @@
  */
 
 var Header          = require('./Header'),
-    fieldConstants  = require('../../constants/fieldConstants');
+    fieldConstants  = require('./fieldConstants');
 
 var Wrap = React.createClass({
     getInitialState: function(){
