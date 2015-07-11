@@ -1,0 +1,30 @@
+#mainReact
+  +size(100%)
+
+#main
+  +size(1024px 100%)
+  margin: 0 auto
+
+#wrap
+  min-height: 100%
+  margin-bottom: -50px
+  &:after
+    content: ""
+    display: block
+    +size(1024px 50px)
+
+.content
+  width: 94%
+
+#header
+  +size(1024px 50px)
+  background: $color-background-grey
+  text-align: center
+  display: table-cell
+  vertical-align: middle
+
+#footer
+  +size(1024px 50px)
+  text-align: left
+  padding-top: 13px
+  border-top: 1px solid $color-background-grey

@@ -1,5 +1,5 @@
 /**
- * Created by volkov_p_v on 11.07.2015.
+ * Created by https://github.com/volkovpv on 07.2015.
  */
 
 var express         = require('express'),
@@ -10,21 +10,22 @@ var express         = require('express'),
     source          = require('vinyl-source-stream'),
     buffer          = require('vinyl-buffer'),
     browserify      = require('browserify'),
-    uglify 			 = require('gulp-uglify');
+    uglify 			= require('gulp-uglify'),
+    sourcemaps      = require('gulp-sourcemaps');
 
 var src = {
-    base: "./src/",
-    js: "./src/js/main.js",
-    css: "./src/style/style.css",
-    html: "./src/*.html"
+    base:   "./src/",
+    js:     "./src/js/main.js",
+    css:    "./src/style/style.css",
+    html:   "./src/*.html"
 };
 
 var build = {
-    base: "./www/",
-    nameJs: "main.js",
-    js: "./www/js/",
-    css: "./www/style/",
-    indexHtml: "./www/index.html"
+    base:       "./www/",
+    nameJs:     "main.js",
+    js:         "./www/js/",
+    css:        "./www/style/",
+    indexHtml:  "./www/index.html"
 };
 
 
@@ -51,6 +52,8 @@ gulp.task('react', function(){
         .bundle()
         .pipe(source(build.nameJs))
         .pipe(buffer())
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(sourcemaps.write('../source-map'))
         .pipe(gulp.dest(build.js));
 });
 
@@ -79,7 +82,8 @@ gulp.task('watch', ['server', 'react', 'htmlMini', 'url', 'css'], function() {
     liveReload({ start: true });
 
     gulp.watch('./src/*.html', ['htmlMini']);
-    gulp.watch('./src/js/**/*', ['react']);
+    gulp.watch('./src/js/**', ['react']);
+    gulp.watch('./src/style/*.css', ['css']);
     gulp.watch('./www/**').on('change', function(file) {
         liveReload.changed(file.path);
     });
