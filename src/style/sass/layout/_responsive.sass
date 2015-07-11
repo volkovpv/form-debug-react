@@ -1,0 +1,121 @@
++breakpoint(1300px)
+  .top
+    .up
+      display: block
+
++breakpoint(1400px)
+  .top
+    left: 54px
+
++breakpoint(1920px)
+  .top
+    left: 145px
+
+//----------- 1024px -----------//
++breakpoint(1024px)
+  h1
+    +adjust-font-size-to(56px)
+
+  h2
+    +adjust-font-size-to(54px,3)
+
+  h6
+    +adjust-font-size-to(27px)
+
+  .mainHeader
+    .headerLeft
+      +adjust-font-size-to(16px)
+
+      span
+        +adjust-font-size-to(22px,1)
+
+    .headerRight
+      +adjust-font-size-to(16px)
+
+  .blockFirst
+    .contacts
+      .scope
+        +adjust-font-size-to(32px,1.5)
+
+      .connection
+        +adjust-font-size-to(17px,2)
+
+    .description
+      .wrapDescription
+        padding-left: span(2)
+
+        p
+          margin-left: span(1.5)
+
+    .headerBlockFirst
+      p
+        +adjust-font-size-to(27px)
+
+  .blockThird
+    .stepFirst
+      .tel
+        +adjust-font-size-to(22px,2.3)
+
+      .email
+        +adjust-font-size-to(22px,2.3)
+
+  .blockFourth
+    .solutionContent
+      &>div
+        &>span
+          +adjust-font-size-to(28px,1.4)
+
+        p
+          +adjust-font-size-to(19px,1)
+
+  .control
+    right: 3.5%
+
+  .blockSeventh .wrapReviews .logoReviews img
+    max-width: none
+
+
+
+//----------- 1200 -----------//
++breakpoint(1200px)
+  h1
+    +adjust-font-size-to(66.43px)
+
+  h2
+    +adjust-font-size-to(57.53px,3)
+
+  h6
+    +adjust-font-size-to(30.9px)
+
+  .mainHeader
+    .headerLeft
+      +margin-leader(0.7)
+      +adjust-font-size-to(19px)
+
+      span
+        +adjust-font-size-to(26px,1)
+
+    .headerRight
+      +margin-leader(0.7)
+      +adjust-font-size-to(19px)
+
+  .blockFirst
+    background-position: 50% 50%
+
+    .contacts
+      .scope
+        +adjust-font-size-to(33.7px,1.5)
+
+      .connection
+        +adjust-font-size-to(19px,2)
+
+    .description
+      .wrapDescription
+        padding-left: span(2.6)
+
+        p
+          margin-left: span(1)
+
+    .headerBlockFirst
+      p
+        +adjust-font-size-to(31.97px)
