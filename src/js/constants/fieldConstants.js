@@ -4,24 +4,43 @@
 
 var fieldConstants = [
     {
-        fieldName: "Имя",
-        fieldNumber: 0
+        FIELD_NAME: "Имя",
+        FIELD_NUMBER: 0,
+        TYPE: "text"
     },
     {
-        fieldName: "Фамилия",
-        fieldNumber: 1
+        FIELD_NAME: "Фамилия",
+        FIELD_NUMBER: 1,
+        TYPE: "text"
     },
     {
-        fieldName: "Отчество",
-        fieldNumber: 2
+        FIELD_NAME: "Отчество",
+        FIELD_NUMBER: 2,
+        TYPE: "text"
     },
     {
-        fieldName: "Возраст",
-        fieldNumber: 3
+        FIELD_NAME: "Возраст",
+        FIELD_NUMBER: 3,
+        TYPE: "text"
     },
     {
-        fieldName: "Пол",
-        fieldNumber: 4
+        FIELD_NAME: "Пол",
+        FIELD_NUMBER: 4,
+        TYPE: "select",
+        OPTION: [
+            {
+                ID: 0,
+                SEX: "Выберите"
+            },
+            {
+                ID: 1,
+                SEX: "Мужской"
+            },
+            {
+                ID: 2,
+                SEX: "Женский"
+            }
+        ]
     }
 ];
 

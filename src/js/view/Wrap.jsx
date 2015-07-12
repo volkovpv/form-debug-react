@@ -3,12 +3,13 @@
  */
 
 var Header          = require('./Header'),
-    fieldConstants  = require('./fieldConstants');
+    fieldConstants  = require('../constants/fieldConstants'),
+    Form            = require('./form/Form');
 
 var Wrap = React.createClass({
     getInitialState: function(){
         return{
-            textFill: "Заполнить: ",
+            textFill: "Заполните: ",
             fieldConstants: fieldConstants
         }
     },
@@ -22,9 +23,12 @@ var Wrap = React.createClass({
                         <span>{this.state.textFill}</span>
                         {this.state.fieldConstants.map(function(data){
                             return(
-                                <span>{data.fieldName} </span>
+                                <span className="fill-name" key={data.FIELD_NUMBER}>{data.FIELD_NAME}</span>
                             )
                         })}
+                    </div>
+                    <div className="form-and-list">
+                        <Form/>
                     </div>
 
 
